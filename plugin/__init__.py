@@ -61,7 +61,7 @@ def _settings_changed_callback() -> None:
 
 
 def _init_images() -> None:
-    for img_name in global_get("images").keys():
+    for img_name in global_get("images"):
         if not img_name.startswith("@"):
             global_set(f"images.{img_name}", get_image_info(img_name))
 
